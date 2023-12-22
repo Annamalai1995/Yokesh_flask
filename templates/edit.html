@@ -1,0 +1,47 @@
+{%extends 'navigation.html'%}
+{%block Aaju%}
+    <div class="col-12 col-sm-12 col-md-8 col-lg-6 shadow-lg p-4">
+        <form action="/update/{{data.bikemodel}}" method="post">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-6 col-md-6">
+                    <label>Bike Model Name</label>
+                    <input value="{{data.bikemodel}}" readonly type="text" name="bikemodel" placeholder="Bike model" class="form-control"/>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <label>Bike Name</label>
+                    <input value="{{data.bikename}}" type="text" name="bikename" placeholder="Bike name" class="form-control"/>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-6 col-md-6">
+                    <label>Registration number</label>
+                    <input value="{{data.regno}}" type="text" name="regno" placeholder="Registration number" class="form-control"/>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <label>Bike CC</label>
+                    <input value="{{data.cc}}" type="text" name="cc" placeholder="Bike cc" class="form-control"/>
+                </div>
+            </div>
+            <div class="form group">
+                <label>Bike type</label>
+                <input value="{{data.type}}" type="text" name="type" placeholder="bike type" class="form-control" />
+            </div>
+            <div class="form group">
+                <label>Bike Stock quantity</label>
+                <input value="{{data.stock}}" type="text" name="stock" placeholder="Bike Stock" class="form-control" />
+            </div>
+            <div class="form group">
+                <label>Bike Price</label>
+                <input value="{{data.price}}" type="text" name="price" placeholder="Bike price" class="form-control" />
+            </div>
+            <div class="row mt-5 justify-content-evenly">
+                <button type="submit" class="btn btn-outline-success rounded-pill col-2">
+                    <h3 class="bi bi-cloud-upload-fill"></h3>
+                </button>
+                <button type="reset" class="btn btn-outline-dark rounded-pill col-2">
+                    <h3 class="bi bi-x-circle-fill"></h3>
+                </button>
+            </div>
+        </form>
+    </div>
+{%endblock%}
